@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Маркетинговий директор",
+  "version": "0.8.0",
+  "description": "AI-агент, який аналізує відкриту сторінку й показує маркетинговий звіт у бічній панелі.",
+  "permissions": ["sidePanel", "tabs", "scripting", "storage"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Відкрити маркетингового директора"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}

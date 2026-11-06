@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Маркетинговий директор</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Маркетинговий директор</h1>
+    <p class="muted">AI-агент для аналізу публічних сторінок</p>
+  </header>
+
+  <p id="server-status" class="status" role="status">Перевірка сервера…</p>
+
+  <section id="server-setup" class="card" hidden>
+    <p class="label">ID розширення для запуску сервера</p>
+    <p id="extension-id" class="url"></p>
+    <form id="token-form" class="token-form">
+      <label class="label" for="token-input">Токен сервера</label>
+      <input id="token-input" type="password" autocomplete="off" required>
+      <button class="secondary" type="submit">Зберегти токен</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <p class="label">Поточна сторінка</p>
+    <p id="page-title" class="title">Завантаження…</p>
+    <p id="page-url" class="muted url"></p>
+  </section>
+
+  <label class="label field-label" for="known-input">Що вже відомо (необов'язково)</label>
+  <textarea id="known-input" rows="3"></textarea>
+
+  <button id="analyze-button" class="action" type="button">Аналізувати</button>
+  <button id="read-button" class="secondary wide" type="button">Лише прочитати сторінку</button>
+  <p class="muted notice">Агент отримає текст відкритої сторінки. Не запускайте аналіз на сторінках з особистими даними.</p>
+
+  <p id="analysis-status" class="status" role="status" hidden></p>
+
+  <section id="report" class="card" hidden>
+    <p class="label">Звіт</p>
+    <p id="report-meta" class="report-meta"></p>
+    <p id="report-text" class="report-text"></p>
+  </section>
+
+  <p id="status" class="status" role="status" hidden></p>
+
+  <section id="result" class="card" hidden>
+    <p class="label">Прочитаний текст</p>
+    <p id="result-count" class="count"></p>
+    <p id="result-preview" class="preview"></p>
+    <p id="result-extra" class="preview"></p>
+  </section>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
